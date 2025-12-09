@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthew DiRamacca </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle">
+        <button class="theme-btn active" data-theme="default" title="Default Theme">Default</button>
+        <button class="theme-btn" data-theme="high-contrast" title="High Contrast Theme">High Contrast</button>
+        <button class="theme-btn" data-theme="vim" title="Vim Theme">Vim</button>
+    </div>
+    <!-- Landing Page Section -->
+    <div class="landing-page">
+        <div class="landing-content">
+            <h1 class="landing-name">Matthew DiRamacca</h1>
+            <div class="cover-letter-box">
+                <p id="cover-letter-text">Cover letter like description that lays out my goals and career aspirations</p>
+            </div>
+            <div class="scroll-indicator">
+                <p class="scroll-text">Scroll to reveal full page</p>
+                <div class="scroll-arrow">↓</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Resume Page (Hidden initially, reveals on scroll) -->
+    <div class="full-page" id="full-page">
+        <div class="container">
+            <!-- Top Row: Description (Left) + Picture (Right) -->
+            <div class="top-row">
+                <!-- Description Section -->
+                <section id="about" class="section description-section">
+                    <h2>Description of Myself:</h2>
+                    <div id="about-content" class="about-content">
+                        <p id="about-text" class="about-text">
+                            Work history limited. Skills you are seeing them used right now.
+                        </p>
+                        <div id="job-history" class="job-list">
+                            <!-- Jobs will be dynamically added here -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Profile Picture Section -->
+                <section class="section picture-section">
+                    <h2>Picture of Myself</h2>
+                    <div class="profile-image-container">
+                        <img src="https://via.placeholder.com/300" alt="Profile Picture" id="profile-picture" class="profile-picture">
+                        <div class="image-placeholder">
+                            <p>Add your photo here</p>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <p id="name">Matthew DiRamacca</p>
+                        <p id="title">Dev</p>
+                        <p id="email">mattydiramacca@gmail.com</p>
+                        <p id="location">Naples, FL</p>
+                    </div>
+                    
+                    <!-- Email Submission Form for Employers -->
+                    <div class="contact-form-container">
+                        <h3>Interested in Hiring?</h3>
+                        <p class="form-subtitle">Submit your email to get in touch</p>
+                        <form id="employer-email-form" class="employer-form">
+                            <div class="form-group">
+                                <label for="employer-name">Your Name</label>
+                                <input type="text" id="employer-name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="employer-email">Your Email</label>
+                                <input type="email" id="employer-email" name="email" required placeholder="john@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="employer-company">Company (Optional)</label>
+                                <input type="text" id="employer-company" name="company" placeholder="Company Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="employer-message">Message (Optional)</label>
+                                <textarea id="employer-message" name="message" rows="3" placeholder="Tell me about the opportunity..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary form-submit-btn">Submit</button>
+                        </form>
+                        <div id="form-message" class="form-message hidden"></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Bottom Row: Game (Left) + Projects (Right) -->
+            <div class="bottom-row">
+                <!-- Interactive Game Section -->
+                <section id="game" class="section game-section">
+                    <h2>Play a Game on the Server Right Here to Showcase Said Skills</h2>
+                    <div class="game-container">
+                        <div class="game-controls">
+                            <button id="start-pause-game" class="btn btn-primary">Start Game</button>
+                            <button id="reset-game" class="btn btn-secondary">Reset</button>
+                            <div class="score-display">
+                                <span>Score: <span id="score">0</span></span>
+                                <span>High Score: <span id="high-score">0</span></span>
+                            </div>
+                        </div>
+                        <canvas id="game-canvas" width="400" height="400"></canvas>
+                        <div id="game-over" class="game-over hidden">
+                            <h3>Game Over!</h3>
+                            <p>Your Score: <span id="final-score">0</span></p>
+                            <button id="play-again" class="btn btn-primary">Play Again</button>
+                        </div>
+                    </div>
+                    <p class="game-description">
+                        Use WASD keys to control the snake.
+                    </p>
+                </section>
+
+                <!-- Projects Section -->
+                <section id="projects" class="section projects-section">
+                    <h2>Projects and Current Ideas:</h2>
+                    <div id="project-history" class="project-list">
+                        <!-- Projects will be dynamically added here -->
+                    </div>
+            </section>
+        </div>
+    </div>
+    </div>
+
+    <script src="dynamic.js"></script>
+</body>
+</html>

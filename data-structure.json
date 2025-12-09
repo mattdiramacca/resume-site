@@ -1,0 +1,85 @@
+{
+  "description": "Database structure for storing employer email submissions",
+  "recommendations": {
+    "simple": {
+      "service": "Formspree",
+      "description": "Free form submission service - no backend needed",
+      "url": "https://formspree.io",
+      "setup": "Sign up, get form endpoint, update JavaScript fetch URL"
+    },
+    "intermediate": {
+      "service": "Firebase / Supabase",
+      "description": "Backend-as-a-Service with database",
+      "database_structure": {
+        "collection": "employer_submissions",
+        "fields": {
+          "id": "auto-generated",
+          "name": "string",
+          "email": "string",
+          "company": "string",
+          "message": "text",
+          "timestamp": "datetime",
+          "status": "string (new/contacted/hired)"
+        }
+      }
+    },
+    "advanced": {
+      "service": "Custom Backend",
+      "description": "Build your own API endpoint",
+      "database_schema": {
+        "table": "employer_submissions",
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER PRIMARY KEY AUTO_INCREMENT"
+          },
+          {
+            "name": "name",
+            "type": "VARCHAR(255) NOT NULL"
+          },
+          {
+            "name": "email",
+            "type": "VARCHAR(255) NOT NULL"
+          },
+          {
+            "name": "company",
+            "type": "VARCHAR(255)"
+          },
+          {
+            "name": "message",
+            "type": "TEXT"
+          },
+          {
+            "name": "timestamp",
+            "type": "DATETIME DEFAULT CURRENT_TIMESTAMP"
+          },
+          {
+            "name": "status",
+            "type": "VARCHAR(50) DEFAULT 'new'"
+          }
+        ]
+      },
+      "example_endpoints": {
+        "POST /api/submit-email": "Submit new employer email",
+        "GET /api/submissions": "Retrieve all submissions (admin)",
+        "PUT /api/submissions/:id": "Update submission status"
+      }
+    }
+  },
+  "current_implementation": {
+    "storage": "localStorage (browser only - for testing)",
+    "structure": {
+      "employerSubmissions": [
+        {
+          "name": "string",
+          "email": "string",
+          "company": "string",
+          "message": "string",
+          "timestamp": "ISO 8601 datetime string"
+        }
+      ]
+    },
+    "note": "localStorage is client-side only. For production, implement one of the recommended solutions above."
+  }
+}
+
