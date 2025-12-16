@@ -4,22 +4,6 @@ const resumeData = {
     title: "Dev",
     email: "mattydiramacca@gmail.com", // Note: Fixed double dot from HTML
     location: "Naples, FL",
-<<<<<<< HEAD
-    coverLetter: "Cover letter like description that lays out my goals and career aspirations",
-    about: "Work history limited. Skills you are seeing them used right now.",
-    jobs: [
-        {
-            title: "Senior Software Engineer",
-            company: "Tech Company Inc.",
-            period: "2022 - Present",
-            description: "Led development of scalable web applications using modern frameworks. Collaborated with cross-functional teams to deliver high-quality software solutions."
-        },
-        {
-            title: "Full Stack Developer",
-            company: "StartupXYZ",
-            period: "2020 - 2022",
-            description: "Developed and maintained full-stack applications. Implemented RESTful APIs and responsive front-end interfaces. Worked with React, Node.js, and PostgreSQL."
-=======
     coverLetter: `
     I’m currently working in the restaurant industry while studying for my CompTIA Security+ certification and building up my skills for a future in tech. I enjoy programming everything from web pages to terminal text editors and small games, and I have experience with JavaScript, C, and C++ while always being open to learning more. My goal is to build a long-term tech career where I can keep growing, solving problems, and putting my curiosity and work ethic to good use. 
     `,
@@ -27,7 +11,7 @@ const resumeData = {
     jobs: [
         {
             title: "IT Support Specialist",
-            company: "Oni Studios",
+            company: "Blank Company",
             period: "2023 - 2025",
             description: "Led IT support for the company, including hardware and software installation and maintenance."
         },
@@ -36,7 +20,6 @@ const resumeData = {
             company: "Jimmy Johns LOL",
             period: "2020 - 2025",
             description: "Worked managing and scheduling staff, ordering inventory, keeping track of inventory and maintaining a good work enviornment. All while completing daily operations in an efficient and quality manner."
->>>>>>> c6d8735 (made some fixes)
         },
         {
             title: "Junior Developer",
@@ -58,7 +41,7 @@ const resumeData = {
         },
         {
             title: "Vim-like Text Editor",
-            tech: ["C"],
+            tech: ["C" , "C++"],
             description: "Terminal-based text editor inspired by vim, coded in C for maximum efficiency and performance. Features modal editing, command mode, and low-level terminal control."
         },
         {
@@ -592,7 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const game = new SnakeGame('game-canvas');
     game.draw(); // Initial draw
 
-    // Setup profile picture upload
+    // Setup profile picture uploadz
     const profilePicture = document.getElementById('profile-picture');
     const imagePlaceholder = document.querySelector('.image-placeholder');
 
@@ -654,6 +637,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Setup theme toggle
+// Keyboard shortcut: Shift + T cycles themes
+document.addEventListener('keydown', (e) => {
+    if (!e.shiftKey || e.key.toLowerCase() !== 't') return;
+
+    // prevent accidental text input issues
+    e.preventDefault();
+
+    const themeButtons = Array.from(document.querySelectorAll('.theme-btn'));
+    if (!themeButtons.length) return;
+
+    const currentTheme = document.body.getAttribute('data-theme') || 'default';
+    const currentIndex = themeButtons.findIndex(
+        btn => btn.dataset.theme === currentTheme
+    );
+
+    const nextIndex = (currentIndex + 1) % themeButtons.length;
+    const nextBtn = themeButtons[nextIndex];
+
+    // Update active button
+    themeButtons.forEach(btn => btn.classList.remove('active'));
+    nextBtn.classList.add('active');
+
+    // Apply theme
+    const nextTheme = nextBtn.dataset.theme;
+    document.body.setAttribute('data-theme', nextTheme);
+    localStorage.setItem('resume-theme', nextTheme);
+});
     const themeButtons = document.querySelectorAll('.theme-btn');
     const savedTheme = localStorage.getItem('resume-theme') || 'default';
     
