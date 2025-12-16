@@ -30,13 +30,8 @@ const resumeData = {
     ],
     projects: [
         {
-            title: "E-Commerce Platform",
-            tech: ["React", "Node.js", "MongoDB", "Stripe"],
-            description: "Built a full-featured e-commerce platform with user authentication, product management, and payment integration."
-        },
-        {
-            title: "Task Management App",
-            tech: ["Vue.js", "Firebase", "CSS3"],
+            title: "C Compiler",
+            tech: ["C" "C++"],
             description: "Created a collaborative task management application with real-time updates and drag-and-drop functionality."
         },
         {
@@ -46,7 +41,7 @@ const resumeData = {
         },
         {
             title: "Portfolio Website",
-            tech: ["HTML5", "CSS3", "JavaScript"],
+            tech: ["HTML5", "CSS3", "JavaScript" , "C"],
             description: "Designed and developed a responsive portfolio website showcasing projects and skills."
         }
     ]
