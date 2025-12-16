@@ -308,7 +308,7 @@ body {
 
 .profile-picture {
     width: 256px;
-    height: 256x;
+    height: 256px;
     object-fit: cover;   /* prevents stretching */
     border-radius: 0px;  /* small rounding — set to 0 for sharp square */
     border: 2px solid var(--border-color);
