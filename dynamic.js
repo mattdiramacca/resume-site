@@ -4,6 +4,7 @@ const resumeData = {
     title: "Dev",
     email: "mattydiramacca@gmail.com", // Note: Fixed double dot from HTML
     location: "Naples, FL",
+<<<<<<< HEAD
     coverLetter: "Cover letter like description that lays out my goals and career aspirations",
     about: "Work history limited. Skills you are seeing them used right now.",
     jobs: [
@@ -18,6 +19,24 @@ const resumeData = {
             company: "StartupXYZ",
             period: "2020 - 2022",
             description: "Developed and maintained full-stack applications. Implemented RESTful APIs and responsive front-end interfaces. Worked with React, Node.js, and PostgreSQL."
+=======
+    coverLetter: `
+    I’m currently working in the restaurant industry while studying for my CompTIA Security+ certification and building up my skills for a future in tech. I enjoy programming everything from web pages to terminal text editors and small games, and I have experience with JavaScript, C, and C++ while always being open to learning more. My goal is to build a long-term tech career where I can keep growing, solving problems, and putting my curiosity and work ethic to good use. 
+    `,
+    about: "Work history limited. Skills you are seeing them used right now.",
+    jobs: [
+        {
+            title: "IT Support Specialist",
+            company: "Oni Studios",
+            period: "2023 - 2025",
+            description: "Led IT support for the company, including hardware and software installation and maintenance."
+        },
+        {
+            title: "General Manager",
+            company: "Jimmy Johns LOL",
+            period: "2020 - 2025",
+            description: "Worked managing and scheduling staff, ordering inventory, keeping track of inventory and maintaining a good work enviornment. All while completing daily operations in an efficient and quality manner."
+>>>>>>> c6d8735 (made some fixes)
         },
         {
             title: "Junior Developer",
