@@ -7,37 +7,37 @@ const resumeData = {
     coverLetter: `
     I’m currently working in the restaurant industry while studying for my CompTIA Security+ certification and building up my skills for a future in tech. I enjoy programming everything from web pages to terminal text editors and small games, and I have experience with JavaScript, C, and C++ while always being open to learning more. My goal is to build a long-term tech career where I can keep growing, solving problems, and putting my curiosity and work ethic to good use. 
     `,
-    about: "Work history limited. Skills you are seeing them used right now.",
+    about: "Work history limited. Technical abilities are on display currently, unfortunatley I can't manage a Jimmy Johns on a website because if i could i would.",
     jobs: [
         {
             title: "IT Support Specialist",
-            company: "Blank Company",
+            company: "Oni Studios",
             period: "2023 - 2025",
             description: "Led IT support for the company, including hardware and software installation and maintenance."
         },
         {
             title: "General Manager",
-            company: "Jimmy Johns LOL",
+            company: "Jimmy Johns",
             period: "2020 - 2025",
             description: "Worked managing and scheduling staff, ordering inventory, keeping track of inventory and maintaining a good work enviornment. All while completing daily operations in an efficient and quality manner."
         },
         {
-            title: "Junior Developer",
-            company: "Web Solutions Ltd.",
+            title: "Server/Floor Manager",
+            company: "The Warehouse Cuisine and Cocktails.",
             period: "2018 - 2020",
-            description: "Built and maintained web applications. Learned best practices in software development and collaborated with senior developers on various projects."
+            description: "Served customers and managed my teammates on the floor, delivered high quality restaurant service under pressure.."
         }
     ],
     projects: [
         {
             title: "C Compiler",
-            tech: ["C" "C++"],
-            description: "Created a collaborative task management application with real-time updates and drag-and-drop functionality."
+            tech: ["C" , "C++"],
+            description: "Created a compiler in C for efficiency and just to get familiar with how compilers operate."
         },
         {
             title: "Vim-like Text Editor",
             tech: ["C" , "C++"],
-            description: "Terminal-based text editor inspired by vim, coded in C for maximum efficiency and performance. Features modal editing, command mode, and low-level terminal control."
+            description: "Terminal-based text editor inspired by vim, coded in C for maximum efficiency and performance. Features modal editing, command mode, and low-level terminal control. Still in development, code available on GitHub."
         },
         {
             title: "Portfolio Website",
